@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi-alpine:3.6
+FROM resin/raspberry-pi-alpine:3.8
 
 RUN [ "cross-build-start" ]
 
