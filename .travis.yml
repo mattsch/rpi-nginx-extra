@@ -8,7 +8,7 @@ env:
   - IMG_NAME="docker.io/mattsch/rpi-nginx-extra"
 
 script:
-- 'echo "$D_P" | docker login -u "$D_U" -password-stdin || exit 1'
+- 'echo "$D_P" | docker login -u "$D_U" --password-stdin || exit 1'
 - 'docker build -t ${IMG_NAME}:${TRAVIS_BUILD_NUMBER} -t ${IMG_NAME}:latest .'
 - 'docker push ${IMG_NAME}:${TRAVIS_BUILD_NUMBER}'
 - 'docker push ${IMG_NAME}:latest'
